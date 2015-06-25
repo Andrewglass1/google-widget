@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: google_widget_development
+
+test:
+  <<: *default
+  database: google_widget_test
+
+
+production:
+  <<: *default
+  database: google_widget_production
+  username: google_widget
+  password: <%= ENV['GOOGLE_WIDGET_DATABASE_PASSWORD'] %>

@@ -1,0 +1,38 @@
+<div id="desktop">
+<div id="header">
+  <%= image_tag "#{@business["slug"]}/search.png" %>
+  <%= image_tag "name.png", id: "name" %>
+</div>
+
+<div id="sub-header">
+  <%= image_tag "links.png" %>
+  <%= image_tag "settings.png", id: "settings" %>
+</div>
+
+<div id="result-left">
+  <%= image_tag "#{@business["slug"]}/results.jpg", id: "results" %>
+</div>
+
+<div id="result-right">
+  <%= image_tag "#{@business["slug"]}/right_top.png", id: "right-top" %>
+  <div id="specials-tab">
+    <div id="specials-top">
+      <h2 id="specials-title">Current Specials</h2>
+      <a href="#" id="view-all">View All Specials</a>
+    </div>
+  </div>
+  <%= image_tag "#{@business["slug"]}/right_bottom.png", id: "right-bottom" %>
+</div>
+
+<div id="footer">
+  <%= image_tag "footer.png", id: "results" %>
+</div>
+
+</div>
+
+<div id="mobile">
+  <%= image_tag "#{@business["slug"]}/mobile_top.png", id: "mobile-top" %>
+  <h3>Current Specials</h3>
+  <%= image_tag "#{@business["slug"]}/mobile_bottom.png", id: "mobile-top" %>
+
+</div>

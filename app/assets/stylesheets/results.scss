@@ -1,0 +1,81 @@
+// Place all the styles related to the results controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* { margin: 0; padding: 0; }
+html, body {
+    margin: 0;
+    height: 100%;
+}
+h1,h2,h3,p,span,a {font-family: 'Roboto', sans-serif;}
+
+#header {
+  height: 59px; overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f1f1f1;
+  img {height: 100%;}
+  #name {float: right;}
+}
+
+
+#sub-header {
+  height: 59px; overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
+  img {height: 100%;}
+  #settings {float: right;}
+}
+
+
+#result-left{
+  width: 700px; display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  #results {width: 700px;}
+}
+
+#result-right{
+  margin-top: 52px; width: 457px; display: inline-block; vertical-align: top;
+  position: absolute; left: 700px;
+
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+  img {width: 100%;}
+}
+#footer{
+  height: 84px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #e5e5e5;
+  img {height: 100%; display: block;}
+}
+
+#specials-tab{
+  padding: 0 15px;
+  #specials-title {font-size: 18px; font-weight: 400; display: inline-block;}
+  #view-all { float: right; display: inline-block; text-decoration: none; font-weight: bold; font-size: 13px;}
+}
+
+
+
+#index{
+  height: 100%; width: 100%; background-color: #222;
+
+  #inner-index{
+    padding-top: 100px;
+    #logo { width: 367px; display: block; margin: 0 auto 50px auto;}
+    a {color: white;text-decoration: none;}
+    h2 {text-align: center; margin-bottom: 20px;}
+  }
+}
+
+
+#mobile{ display: none;}
+
+@media (max-width: 560px) {
+
+  #desktop { display: none;}
+  #mobile{
+    display: block;
+    #mobile-top {width: 100%;}
+
+  }
+}
