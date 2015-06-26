@@ -49,9 +49,47 @@ h1,h2,h3,p,span,a {font-family: 'Roboto', sans-serif;}
 }
 
 #specials-tab{
-  padding: 0 15px;
-  #specials-title {font-size: 18px; font-weight: 400; display: inline-block;}
-  #view-all { float: right; display: inline-block; text-decoration: none; font-weight: bold; font-size: 13px;}
+  padding: 0 15px; margin-bottom: 10px;
+  #specials-top{
+    margin-bottom: 15px; position: relative;
+    #specials-title {font-size: 18px; font-weight: 400; display: inline-block;}
+    #view-all {
+      display: inline-block; text-decoration: none; font-weight: bold; font-size: 12px; color: #1a0dab;
+      position: absolute; right: 0; bottom: 0;
+      &:hover {text-decoration: underline;}
+    }
+  }
+
+  #special-image { height: 185px; width: 150px; display: inline-block; margin-right: 15px;}
+  #special-content{
+    display: inline-block; width: 234px; vertical-align: top; height: 185px; position: relative;
+    margin-top: -2px;
+    p{ font-size: 13px; line-height: 16px; margin-bottom: 10px;}
+    a{
+      font-size: 13px; line-height: 16px; margin-bottom: 10px; display: block; text-decoration: none; color: #1a0dab;
+      &:hover {text-decoration: underline;}
+    }
+    .special-title {
+      font-weight: bold; margin-bottom: 10px; font-size: 15px; line-height: 20px; display: none;
+      &.current { display: inline-block;}
+    }
+    .special-details{
+      display: none;
+      &.current { display: inline-block;}
+    }
+    #bottom-links {
+      position: absolute; bottom: -7px;
+      .specials-link{
+        color: gray; text-decoration: none; margin-right: 20px; font-size: 12px; display: inline;
+        &.last {margin-right: 0;}
+      }
+    }
+  }
+  #specials-link-container{
+    width: 20px; height: 185px; display: inline-block; vertical-align: top; position: relative;
+    .specials-toggle { color: gray; text-decoration: none; font-size: 60px; height: 30px;
+        margin: auto 0; position: absolute; top: 45px; right: 0;}
+  }
 }
 
 
@@ -75,7 +113,7 @@ h1,h2,h3,p,span,a {font-family: 'Roboto', sans-serif;}
   #desktop { display: none;}
   #mobile{
     display: block;
-    #mobile-top {width: 100%;}
+    #mobile-top, #mobile-bottom {width: 100%;}
 
   }
 }

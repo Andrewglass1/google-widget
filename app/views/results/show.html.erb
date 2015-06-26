@@ -15,10 +15,34 @@
 
 <div id="result-right">
   <%= image_tag "#{@business["slug"]}/right_top.png", id: "right-top" %>
+
   <div id="specials-tab">
     <div id="specials-top">
-      <h2 id="specials-title">Current Specials</h2>
-      <a href="#" id="view-all">View All Specials</a>
+      <h2 id="specials-title">Current Specials and Events</h2>
+      <a href="#" id="view-all">View All Specials and Events</a>
+    </div>
+
+    <div id="specials-bottom" data-count="<%= @business['specials'].count %>" data-current="0">
+      <%= image_tag "#{@business["slug"]}/promo_sample.jpg", id: "special-image" %>
+
+      <div id="special-content">
+        <% @business["specials"].each_with_index do |special, index| %>
+          <p class="special-title <%= 'current' if index == 0 %>" data-index="<%= index %>">
+            <%= special["title"] %>
+          </p>
+          <div class="special-details <%= 'current' if index == 0 %>" data-index="<%= index %>">
+            <%= special["details"].html_safe %>
+          </div>
+        <% end %>
+        <div id="bottom-links">
+          <%= link_to "Add to Favorites","#" , class: "specials-link" %>
+          <%= link_to "Invite Friends","#" , class: "specials-link last" %>
+        </div>
+      </div>
+
+      <div id="specials-link-container">
+        <%= link_to '&rsaquo;'.html_safe, "#", class: "specials-toggle" %>
+      </div>
     </div>
   </div>
   <%= image_tag "#{@business["slug"]}/right_bottom.png", id: "right-bottom" %>
@@ -32,7 +56,7 @@
 
 <div id="mobile">
   <%= image_tag "#{@business["slug"]}/mobile_top.png", id: "mobile-top" %>
-  <h3>Current Specials</h3>
-  <%= image_tag "#{@business["slug"]}/mobile_bottom.png", id: "mobile-top" %>
+  <h3>Current Specials</h3>    
+  <%= image_tag "#{@business["slug"]}/mobile_bottom.png", id: "mobile-bottom" %>
 
 </div>

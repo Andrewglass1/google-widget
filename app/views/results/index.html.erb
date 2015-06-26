@@ -4,8 +4,6 @@
     <%= image_tag "co_logo.png", id: "logo" %>
     <% @businesses.each do |business| %>
       <h2><%= link_to business["name"], result_path(business["slug"]) %></h2>
-      <h2><%= link_to business["name"], result_path(business["slug"]) %></h2>
-      <h2><%= link_to business["name"], result_path(business["slug"]) %></h2>
     <% end %>
 
   </div>
