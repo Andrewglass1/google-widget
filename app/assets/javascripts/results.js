@@ -18,6 +18,10 @@ ready = function(){
 
     return false
   })
+
+  $('.dummy').click(function(){
+    return false
+  })
 }
 
 $(document).ready(ready);

@@ -3,7 +3,7 @@ businesses:
   name: Himalayan Heritage
   specials:
     - title: Himalayan Happy Hour!
-      details: "<p>$3 beers and $5 appetizers.</p><a href=''#'>Link to special menu</a><p>Everyday from 4pm-7pm.</p>"
+      details: "<p>$3 beers and $5 appetizers.</p><a href='#' class='dummy'>Link to special menu</a><p>Everyday from 4pm-7pm.</p>"
       image: "promo_sample.jpg"
     - title: Special Dinner Combo
       details: "<p>Includes choice of one appetizer, one dish, and a King Fischer beer.</p><p>$12.50</p>"

@@ -1,0 +1,35 @@
+<div id="specials-tab" class="<%= 'mobile' if mobile %>">
+  <div id="specials-top">
+    <h2 id="specials-title">Current Specials and Events</h2>
+    <a href="#" id="view-all" class="dummy">View All Specials and Events</a>
+  </div>
+
+  <div id="specials-bottom" data-count="<%= @business['specials'].count %>" data-current="0">
+    <div id="specials-image-container">
+      <% @business["specials"].each_with_index do |special, index| %>
+        <%= image_tag "#{@business["slug"]}/#{special["image"]}",
+            class: "special-image #{'active' if index == 0}",
+            data: {index: index} %>
+      <% end %>
+    </div>
+
+    <div id="special-content">
+      <% @business["specials"].each_with_index do |special, index| %>
+        <p class="special-title <%= 'current' if index == 0 %>" data-index="<%= index %>">
+          <%= special["title"] %>
+        </p>
+        <div class="special-details <%= 'current' if index == 0 %>" data-index="<%= index %>">
+          <%= special["details"].html_safe %>
+        </div>
+      <% end %>
+      <div id="bottom-links">
+        <%= link_to "Add to Favorites","#" , class: "specials-link dummy" %>
+        <%= link_to "Invite Friends","#" , class: "specials-link dummy last" %>
+      </div>
+    </div>
+
+    <div id="specials-link-container">
+      <%= link_to '&rsaquo;'.html_safe, "#", class: "specials-toggle" %>
+    </div>
+  </div>
+</div>
