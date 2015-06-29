@@ -4,23 +4,31 @@ businesses:
   specials:
     - title: Himalayan Happy Hour!
       details: "<p>$3 beers and $5 appetizers.</p><a href=''#'>Link to special menu</a><p>Everyday from 4pm-7pm.</p>"
+      image: "promo_sample.jpg"
     - title: Special Dinner Combo
       details: "<p>Includes choice of one appetizer, one dish, and a King Fischer beer.</p><p>$12.50</p>"
+      image: "promo_sample_2.jpg"
     - title: First time customers take 20% off your entire bill!
       details: "<p>Just mention this ad and visit us today!</p>"
+      image: "promo_sample.jpg"
 - slug: cordial
   name: Cordial
   specials:
     - title: Free wine tasting this Saturday!
       details: "<p>Come in and experience wines from across the globe.</p><p>Test your tasting skills and compare flavor profiles!</p><p>Anyone who joins us will get 20% any bottle of wine.</p>"
+      image: "promo_sample.jpg"
     - title: 10% off your 2nd bottle of wine!
       details: "<p>Offer expires on July 15th.</p>"
+      image: "promo_sample_2.jpg"
 - slug: partners-salon-and-spa
   name: Partners Salon and Spa
   specials:
     - title: Get 5 haircuts and your 6th is FREE!
       details: "<p>Come in and grab a loyalty card today!</p>"
+      image: "promo_sample.jpg"
     - title: Hair coloring seminar tonight!
       details: "<p>Come in and learn from Ms. March as she colors and styles guests in exciting new ways.</p><p>Improve your own skills and network with other hairdressers.</p><p>We'll be serving free food and drinks!</p>"
+      image: "promo_sample_2.jpg"
     - title: Come in and get a haircut, and your kid's haircut is on us!
       details: ""
+      image: "promo_sample.jpg"

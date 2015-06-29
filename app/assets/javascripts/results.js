@@ -5,12 +5,16 @@ ready = function(){
     if(next >= parseInt($('#specials-bottom').attr('data-count'))){
       next = 0;
     };
-    console.log(next)
     $('.special-title').removeClass('current');
     $('.special-details').removeClass('current');
-    $('.special-title[data-index="' + next + '"]').addClass('current')
-    $('.special-details[data-index="' + next + '"]').addClass('current')
-    $('#specials-bottom').attr('data-current', next)
+
+    $('.special-title[data-index="' + next + '"]').addClass('current');
+    $('.special-details[data-index="' + next + '"]').addClass('current');
+
+    $('.special-image').removeClass('active');
+    $('.special-image[data-index="' + next + '"]').addClass('active');
+
+    $('#specials-bottom').attr('data-current', next);
 
     return false
   })

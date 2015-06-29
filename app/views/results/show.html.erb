@@ -23,7 +23,13 @@
     </div>
 
     <div id="specials-bottom" data-count="<%= @business['specials'].count %>" data-current="0">
-      <%= image_tag "#{@business["slug"]}/promo_sample.jpg", id: "special-image" %>
+      <div id="specials-image-container">
+        <% @business["specials"].each_with_index do |special, index| %>
+          <%= image_tag "#{@business["slug"]}/#{special["image"]}",
+              class: "special-image #{'active' if index == 0}",
+              data: {index: index} %>
+        <% end %>
+      </div>
 
       <div id="special-content">
         <% @business["specials"].each_with_index do |special, index| %>
@@ -56,7 +62,7 @@
 
 <div id="mobile">
   <%= image_tag "#{@business["slug"]}/mobile_top.png", id: "mobile-top" %>
-  <h3>Current Specials</h3>    
+  <h3>Current Specials</h3>
   <%= image_tag "#{@business["slug"]}/mobile_bottom.png", id: "mobile-bottom" %>
 
 </div>

@@ -60,7 +60,17 @@ h1,h2,h3,p,span,a {font-family: 'Roboto', sans-serif;}
     }
   }
 
-  #special-image { height: 185px; width: 150px; display: inline-block; margin-right: 15px;}
+  #specials-image-container{
+    position: relative; height: 185px; width: 150px; display: inline-block; margin-right: 15px;
+    .special-image {
+      position:absolute; left:0; opacity: 0;
+      -webkit-transition: opacity .3s ease-in-out;
+      -moz-transition: opacity .3s ease-in-out;
+      -o-transition: opacity .3s ease-in-out;
+      transition: opacity .3s ease-in-out;
+      &.active {opacity: 1;}
+    }
+  }
   #special-content{
     display: inline-block; width: 234px; vertical-align: top; height: 185px; position: relative;
     margin-top: -2px;
